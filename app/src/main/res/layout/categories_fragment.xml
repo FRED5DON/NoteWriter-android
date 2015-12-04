@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <kenel.app.sagosoft.com.Components.Pull2FreshView.PullToRefreshView
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/categories_fragment_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <kenel.app.sagosoft.com.Components.SectionListView.SectionListView
+            android:id="@+id/categories_fragment_sectionlistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </kenel.app.sagosoft.com.Components.SectionListView.SectionListView>
+
+    </kenel.app.sagosoft.com.Components.Pull2FreshView.PullToRefreshView>
+
+</LinearLayout>

@@ -15,8 +15,8 @@ import android.view.View;
 import com.sagosoft.app.android.notewriter.R;
 import com.sagosoft.app.android.notewriter.base.BaseAppCompatActivity;
 import com.sagosoft.app.android.notewriter.base.BaseAppFragment;
+import com.sagosoft.app.android.notewriter.fragment.CategoriesFragment;
 import com.sagosoft.app.android.notewriter.fragment.GlobalSearchFragment;
-import com.sagosoft.app.android.notewriter.fragment.TextEditorFragment;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -34,7 +34,7 @@ public class MainActivity extends BaseAppCompatActivity
     NavigationView navLeft;
 
     private BaseAppFragment globalSearchFragment;
-    private BaseAppFragment textEditorFragment;
+    private BaseAppFragment categoriesFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,9 +79,9 @@ public class MainActivity extends BaseAppCompatActivity
     }
 
     private void initContainer() {
-        if (textEditorFragment == null) {
-            textEditorFragment = TextEditorFragment.getInstance(null);
-            getSupportFragmentManager().beginTransaction().add(R.id.main_container, textEditorFragment).commit();
+        if (categoriesFragment == null) {
+            categoriesFragment = CategoriesFragment.getInstance(null);
+            getSupportFragmentManager().beginTransaction().add(R.id.main_container, categoriesFragment).commit();
         }
     }
 

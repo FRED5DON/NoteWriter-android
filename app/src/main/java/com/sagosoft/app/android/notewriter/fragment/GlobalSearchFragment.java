@@ -10,7 +10,7 @@ import com.sagosoft.app.android.notewriter.R;
 import com.sagosoft.app.android.notewriter.base.BaseAppFragment;
 
 /**
- * Created by FRED_anjujia on 2015/12/2.
+ * Created by FRED on 2015/12/2.
  */
 public class GlobalSearchFragment extends BaseAppFragment {
 

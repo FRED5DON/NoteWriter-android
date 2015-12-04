@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import kenel.app.sagosoft.com.Components.Pull2FreshView.UIMessageView;
 
 /**
- * Created by FRED_anjujia on 2015/12/2.
+ * Created by FRED on 2015/12/2.
  */
 public class BaseAppFragment extends Fragment {
 

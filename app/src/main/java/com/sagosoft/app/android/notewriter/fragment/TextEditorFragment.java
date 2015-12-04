@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 /**
- * Created by FRED_anjujia on 2015/12/2.
+ * Created by FRED on 2015/12/2.
  */
 public class TextEditorFragment extends BaseAppFragment {
 
