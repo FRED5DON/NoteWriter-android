@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>SAGOSOFT</title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="bookmark" href="/favicon.ico" type="image/x-icon"/>
+    <!-- Mobile Specifics -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        .div-editor {
+            width: 100%;
+            min-height: 1em;
+            margin: 0;
+            padding: 0;
+            border-width: 0;
+            outline: none;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        ::-webkit-scrollbar {
+            width: 1px;
+        }
+
+        #toolbar {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    </style>
+</HEAD>
+<BODY>
+<DIV id="title-editor" class="div-editor" contenteditable="true"></DIV>
+<hr/>
+<DIV id="container-editor" class="div-editor" contenteditable="true">
+
+</DIV>
+
+<DiV id="toolbar" data-view="toolbar-bottom">
+    <Button onclick="find('hi')">sf</Button>
+    <Button>sf</Button>
+</DiV>
+
+
+</BODY>
+
+</HTML>
+<SCRIPT type="text/javascript">
+
+    var g = function (id) {
+        return document.getElementById(id);
+    };
+
+    var TITLE_VIEW = g("title-editor");
+    var CONTENT_VIEW = g("container-editor");
+    var currentIndex = 0;
+    var scrollPosition = 0;
+
+    document.body.addEventListener("click", function (el) {
+        if (el.target.nodeName === 'BODY') {
+            CONTENT_VIEW.focus();
+        }
+    });
+    window.addEventListener("scroll", function (el) {
+        console.log(el);
+        scrollPosition = document.body.scrollTop;
+    });
+
+    //查找
+    var findWord=function(keyword){
+        var range;
+        console.log(document.body);
+        /*if(document.all)
+            range=CONTENT_VIEW.createTextRange();
+        else
+            range=CONTENT_VIEW.createRange();
+        range.findText('keyword', 0, 0);*/
+    };
+    //缓存
+
+    //获取内容
+    var getContentAndTitle = function () {
+        var s = {};
+        s.title = TITLE_VIEW.innerText;
+        s.content = CONTENT_VIEW.innerText;
+        s.lastIndex = currentIndex;
+        s.scrollPosition = scrollPosition;
+        return JSON.toString(s);
+    };
+
+    //reloadData
+
+    var loadData = function (data) {
+        if (data) {
+            try {
+                var dob = JSON.parse(data);
+                TITLE_VIEW.innerText = dob.title;
+                CONTENT_VIEW.innerText = dob.content;
+                if (dob.scrollPosition) {
+                    document.body.scrollTop = dob.scrollPosition;
+                }
+                var range = CONTENT_VIEW.createTextRange();
+                //TODO
+            } catch (e) {
+                return 1;
+            }
+        }
+        return 0;
+    };
+
+    //reloadStyles
+    var loadStyles = function (styles) {
+        if (styles) {
+            try {
+                var dob = JSON.parse(styles);
+                //TODO
+
+            } catch (e) {
+                return 1;
+            }
+        }
+        return 0;
+    };
+
+</SCRIPT>
