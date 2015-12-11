@@ -11,5 +11,6 @@
         android:padding="@dimen/common_text_padding6"
         android:textSize="@dimen/common_text_head_size"
         android:background="#EEEEEE"
+        android:textColor="#000000"
         />
 </LinearLayout>

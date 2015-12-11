@@ -35,5 +35,4 @@ dependencies {
     //百分比布局layout
     compile 'com.android.support:percent:23.0.0'
 
-    //x
 }

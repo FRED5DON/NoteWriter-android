@@ -16,12 +16,11 @@
             android:layout_height="match_parent"
             android:visibility="gone" />
 
-        <kenel.app.sagosoft.com.Components.SectionListView.SectionListView
-            android:id="@+id/categories_fragment_sectionlistview"
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/categories_fragment_sticklistview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </kenel.app.sagosoft.com.Components.SectionListView.SectionListView>
+            android:layout_height="wrap_content">
+        </se.emilsjolander.stickylistheaders.StickyListHeadersListView>
 
     </kenel.app.sagosoft.com.Components.Pull2FreshView.PullToRefreshView>
 

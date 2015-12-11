@@ -9,6 +9,9 @@ import java.util.List;
 public class NoteBean extends NoteGroup implements Serializable {
 
     private int id;
+    /**
+     * note name
+     */
     private String name;
     private String contentUri;
     private String content;
